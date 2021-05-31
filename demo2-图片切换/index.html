@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>图片切换</title>
+    <style>
+        img {
+            width: 1000px;
+            height: 600px;
+        }
+
+        .left {
+            width: 50px;
+            height: 50px;
+            position: fixed;
+            left: 0;
+            top: 290px;
+        }
+
+        .right {
+            width: 50px;
+            height: 50px;
+            position: fixed;
+            left: 960px;
+            top: 300px;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <img v-bind:src="imageArr[index]" alt="">
+        <a href="#" @click="prev" v-show="index > 0">
+            <img class="left" src="left.png" alt="">
+        </a>
+        <a href="#" @click="next" v-show="index < imageArr.length - 1">
+            <img class="right" src="right.jpg" alt="">
+        </a>
+
+    </div>
+
+    <!-- 开发环境版本，包含了有帮助的命令行警告 -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <script>
+        var app = new Vue({
+            el: "#app",
+            data: {
+                imageArr: [
+                    '清水洁子.png',
+                    '乌野.png',
+                    '香耶.png',
+                    '亚豆美保.png',
+                    '最强的世界.png'
+                ],
+                index: 0
+            },
+            methods: {
+                prev: function () {
+                    this.index--;
+                },
+                next: function () {
+                    this.index++;
+                }
+            }
+        })
+    </script>
+</body>
+</html>
