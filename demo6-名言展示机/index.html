@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>随机显示名言</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <section id="quote-box">
+        <div class="quote">
+            <p id="text">{{ quote }}</p>
+            <p id="author">- {{ author }}</p>
+        </div>
+        <footer class="footer">
+            <div class="link">
+                <a href="twitter.com/intent/tweet" id="tweet-quote">Twitter</a>
+                <a href="#" id="tweet-quote">Tumblr</a>
+            </div>
+            <button id="new-quote" @click="getData">New quote</button>
+        </footer>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
