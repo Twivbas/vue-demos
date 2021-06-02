@@ -1,0 +1,44 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #87b5b5;
+}
+
+#app {
+    width: 800px;
+    margin: 10px auto;
+    text-align: center;
+}
+
+#app #preview {
+    border: 1px solid black;
+    min-height: 200px;
+    background-color: #c0d8d8;
+    text-align: left;
+    padding-left: 5px;
+}
+
+#editor {
+    background-color: #c0d8d8;
+    padding-left: 5px;
+}
+
+#app #preview code, pre {
+    background-color: white; 
+}
+
+.toolbar {
+    text-align: left;
+    background-color: #4aa3a3;
+    border: 1px solid black;
+    padding: 5px 5px 5px 10px;
+}
+
+#app .toolbar:first-child {
+    width: 586px;
+    margin: 10px auto 0;
+}
